@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".openProfile">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/snowywhite"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/lighterblack"
+        app:cardElevation="0dp">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_exit"
+            android:background="@color/transparent"
+            android:id="@+id/returnButton"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="370dp"
+        app:cardBackgroundColor="@color/snowywhite"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/lighterblack"
+        app:cardElevation="0dp">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_logout"
+            android:background="@color/transparent"
+            android:id="@+id/logoutButton"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/profilePictureHolder"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="200dp"
+            android:layout_marginTop="75dp">
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/profilePictureHolder"
+            android:layout_alignRight="@id/profilePictureHolder"
+            android:src="@drawable/ic_camera"
+            android:id="@+id/selectPicture"
+            android:backgroundTint="@color/soothing"
+            android:elevation="20dp"/>
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilePictureHolder"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:text="Name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/changeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilePictureHolder"
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@id/nameLabel"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Change name"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/accountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLabel"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Test"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/phoneNumLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Phone Number"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/changePhoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountName"
+            android:layout_marginLeft="131dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/phoneNumLabel"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Change phone number"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/accountPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumLabel"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Test"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountPhoneNum"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Password"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/changePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountPhoneNum"
+            android:layout_marginLeft="193dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/passwordLabel"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Change password"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/accountPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordLabel"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:text="*********"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/addressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountPass"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Address"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/changeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountPass"
+            android:layout_marginLeft="214dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/addressLabel"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Change address"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/accountAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressLabel"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="75dp"
+            android:text="Test"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

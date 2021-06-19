@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/analytics"
+        android:enabled="true"
+        android:icon="@drawable/ic_analytics"
+        android:title="Analytics"/>
+    <item
+        android:id="@+id/orders"
+        android:enabled="true"
+        android:icon="@drawable/ic_shipping"
+        android:title="Orders"/>
+    <item
+        android:id="@+id/edit"
+        android:enabled="true"
+        android:icon="@drawable/ic_add"
+        android:title=""/>
+    <item
+        android:id="@+id/review"
+        android:enabled="true"
+        android:icon="@drawable/ic_star"
+        android:title="Reviews"/>
+</menu>

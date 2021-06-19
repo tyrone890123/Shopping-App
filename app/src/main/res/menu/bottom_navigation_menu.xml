@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--A maximum of 5 tabs can be made-->
+    <!--Each items NEEDS  title and and ID for ease of calling in the java file-->
+    <item
+        android:id="@+id/item1"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/item2"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="Search"/>
+    <item
+        android:id="@+id/item3"
+        android:enabled="true"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart"/>
+    <item
+        android:id="@+id/item4"
+        android:enabled="true"
+        android:icon="@drawable/ic_shipping"
+        android:title="Status"/>
+</menu>

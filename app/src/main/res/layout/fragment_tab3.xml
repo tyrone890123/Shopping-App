@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkerwhite"
+    tools:context=".tab3">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkerwhite"
+        android:id="@+id/titleholder">
+
+        <TextView
+            android:id="@+id/shoppingcartlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Shopping Cart"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingcartcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleholder"
+        android:layout_above="@id/checkoutbar"
+        />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/checkoutbar"
+        android:background="@color/darkerwhite">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button android:id="@+id/checkoutbutton"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/soothing"
+                android:text="check out"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+            <TextView android:id="@+id/subtotallabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SubTotal"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/pesosymbolcheckout"
+                android:layout_toLeftOf="@+id/pesosymbolcheckout"/>
+            <TextView android:id="@+id/pesosymbolcheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/soothing"
+                android:layout_toLeftOf="@+id/totalprice"/>
+            <TextView android:id="@+id/totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="20dp"
+                android:textColor="@color/soothing"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/checkoutbutton"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</RelativeLayout>

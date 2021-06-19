@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentOptions">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkerwhite"
+        android:id="@+id/titleholder">
+
+        <TextView
+            android:id="@+id/categorieslabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Payment Options"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/groupedradiobuttonspayment"
+        android:layout_below="@id/titleholder"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash on Delivery"
+            android:buttonTint="@color/soothing"
+            android:id="@+id/codchoice"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GCash"
+            android:id="@+id/gcashchoice"
+            android:buttonTint="@color/soothing" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card"
+            android:id="@+id/cardchoice"
+            android:buttonTint="@color/soothing" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignParentBottom="true"
+        android:text="confirm"
+        android:clickable="false"
+        android:id="@+id/confirmpaymentchoice"/>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".categoryCreator">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Category"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/firsttextcategory"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firsttextcategory"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/secondtextcategory"
+            android:layout_marginBottom="50dp"
+            android:text="Customers are able to see all the categories of your store"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/categorypicholder"
+            android:layout_below="@id/secondtextcategory"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/categoryimage"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:layout_below="@+id/categorypicholder"
+            android:id="@+id/labelnameprofcreation"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelnameprofcreation"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/categorynameinput"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categorynameinput"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/categorybutton"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:text="complete"
+            android:backgroundTint="@color/soothing"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/categorypicholder"
+            android:layout_alignRight="@id/categorypicholder"
+            android:src="@drawable/ic_camera"
+            android:id="@+id/selectorcategory"
+            android:backgroundTint="@color/soothing"
+            android:elevation="20dp"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/progressbarcategory"/>
+</RelativeLayout>

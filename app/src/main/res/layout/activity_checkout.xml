@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkerwhite"
+    tools:context=".checkout">
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_adress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        android:id="@+id/locaitonicon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/locaitonicon"
+        android:text="Delivery Adress"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/locaitonicon"
+        android:id="@+id/deliverytitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOREM IPSUM"
+        android:layout_below="@id/deliverytitle"
+        android:layout_toRightOf="@id/locaitonicon"
+        android:id="@+id/adressOfUser"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/locaitonicon"
+        android:layout_above="@id/checkoutbar"
+        android:id="@+id/checkoutlist"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@id/checkoutbar"
+        android:background="@color/darkerwhite"
+        android:id="@+id/paymentmethodbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_dollar"
+                android:id="@+id/dollaricon"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment option"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/dollaricon"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrowcolored"
+                android:background="@color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/choosepayment"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="LOREM IPSUM"
+                android:layout_toLeftOf="@id/choosepayment"
+                android:textColor="@color/soothing"
+                android:id="@+id/selectedmethod"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/checkoutbar"
+        android:background="@color/darkerwhite">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button android:id="@+id/placeorderbutton"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@color/soothing"
+                android:text="Place order"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+            <TextView android:id="@+id/subtotallabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SubTotal"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/pesosymbolcheckout"
+                android:layout_toLeftOf="@+id/pesosymbolcheckout"/>
+            <TextView android:id="@+id/pesosymbolcheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/soothing"
+                android:layout_toLeftOf="@+id/placeorderprice"/>
+            <TextView android:id="@+id/placeorderprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="20dp"
+                android:textColor="@color/soothing"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/placeorderbutton"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/adresscard"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Adress"
+                android:textSize="30dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:id="@+id/editadress"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:inputType="textMultiLine"
+                android:layout_height="150dp"
+                android:layout_below="@+id/editadress"
+                android:gravity="top"
+                android:padding="5dip"
+                android:id="@+id/adresseditor"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@id/adresseditor"
+                android:text="CONFIRM"
+                android:id="@+id/adressconfirmaiton"/>
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_exit"
+                android:background="@color/transparent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/backfromedit"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

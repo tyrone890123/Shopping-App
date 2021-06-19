@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profilecreation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete your profile"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold
+"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/firsttextprof"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firsttextprof"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/secondtextprof"
+            android:text="Add your correct and complete information"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/profcreationpicholder"
+            android:layout_below="@id/secondtextprof"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="200dp"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/profcreationimage"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:layout_below="@+id/profcreationpicholder"
+            android:id="@+id/labelnameprofcreation"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelnameprofcreation"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/nameinput"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="Phone Number"
+            android:textStyle="bold"
+            android:layout_below="@id/nameinput"
+            android:id="@+id/phoneinputprofcreation"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@id/phoneinputprofcreation"
+            android:id="@+id/phoneinput"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneinput"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:text="Adress"
+            android:id="@+id/adressinputprofcreation"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@+id/adressinputprofcreation"
+            android:id="@+id/adressinput"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/groupedradiobuttonsprof"
+            android:layout_below="@id/adressinput"
+            android:layout_centerHorizontal="true">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:buttonTint="@color/soothing"
+                android:id="@+id/malechoice"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/femalechoice"
+                android:buttonTint="@color/soothing"
+                android:layout_marginLeft="20dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/otherchoice"
+                android:buttonTint="@color/soothing"
+                android:layout_marginLeft="20dp"/>
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/groupedradiobuttonsprof"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/profilecreationbutton"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:text="complete"
+            android:backgroundTint="@color/soothing"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/profcreationpicholder"
+            android:layout_alignRight="@id/profcreationpicholder"
+            android:src="@drawable/ic_camera"
+            android:id="@+id/picselect"
+            android:backgroundTint="@color/soothing"
+            android:elevation="20dp"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/progressbarcreation"/>
+
+
+</RelativeLayout>

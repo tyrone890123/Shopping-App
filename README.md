@@ -2,7 +2,7 @@
 <h1 align="center">Grocery Shopping Application</h3>
  
   <p align="center">
-   <img width="260" src="https://raw.githubusercontent.com/dmarkdenzel/LBYCPD2/master/assets/Home%20Screen.png"> 
+   <img width="260" src="https://raw.githubusercontent.com/tyrone890123/Shopping-App/main/assets/Home%20Screen.png"> 
 </p>
 
  - This project aims to help with buying and selling of groceries for both customers and shop owners to avoid crowded areas such as malls, supermarkets, and wet markets. 

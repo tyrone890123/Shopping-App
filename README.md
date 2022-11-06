@@ -143,3 +143,32 @@ Sellers can add categories and add items on each category using the add items ta
  - April 10, 2021 Firebase integration (Addition of a working login, register and personalized homepage for the user that logged in)
  - April 18, 2021 Initial work on shopping cart (Added new child nodes to the firebase database for items and worked on the retrieval of those items in the application)
 
+<h2 id="contributors">Contributors</h2>
+<table>
+<tr>
+	<th>
+		<p align="center">
+			Jose Antonio Cadavillo
+		</p>
+		<p align="center">
+			jose_antonio_cadavillo@dlsu.edu.ph
+		</p>
+	</th>
+	<th>
+		<p align="center">
+			Mark Denzel Delgado 
+		</p>
+		<p align="center">
+			mark_denzel_delgado@dlsu.edu.ph
+		</p>
+	</th> 
+	<th> 
+		<p align="center">
+			Tyrone Ashley Go 
+		</p>
+		<p align="center">
+		tyrone_go@dlsu.edu.ph
+		</p>
+	</th>
+</tr>
+</table>
